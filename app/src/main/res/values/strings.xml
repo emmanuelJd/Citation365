@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Citation 365</string>
+
+    <string name="no_connection">Une connexion internet est requise pour pouvoir accéder aux données.</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_opened">Drawer Opened</string>
+    <string name="drawer_closed">Drawer Closed</string>
+    <string name="refresh">Refresh</string>
+</resources>

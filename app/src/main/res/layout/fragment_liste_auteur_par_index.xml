@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_liste_auteur_index"
+    android:background="@color/card_background"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <!-- La liste view qui accueil la liste des auteurs -->
+    <ListView
+        android:id="@+id/liste_auteur_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_background"
+        android:divider="@color/card_background"
+        android:dividerHeight="25dp">
+
+    </ListView>
+
+    <!-- Progress bar lors de chargement d'information -->
+    <FrameLayout
+    android:id="@+id/loading_data_liste_auteur_index"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_alignParentTop="true"
+    android:visibility="gone">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+        <!-- Le conteneur qui prévient lors d'un manque d'une connectivité, qu'il en faut une pour récupérer les données -->
+    <FrameLayout
+    android:id="@+id/connection_invalide_liste_auteur_index"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_connection"
+        android:layout_gravity="center"
+        android:textColor="#000"
+        android:padding="10dp"
+        />
+<!--
+    <Button
+        android:id="@+id/btn_refresh_fragment_liste_auteur_index"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/button_app"
+        android:layout_marginBottom="30dp"
+        android:text="@string/refresh"/>
+-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_refresh_fragment_liste_auteur_index"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/ic_action_refresh"
+            app:backgroundTint="@color/principal_theme"
+            app:rippleColor="#00ffffff"
+            android:layout_marginBottom="30dp"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:background="@color/material_blue_grey_800"
+    android:layout_height="wrap_content">
+<!--
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="2dp"
+            android:background="#947a7a7a"
+            />
+-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/citation_text"
+            android:layout_margin="5dp"
+            android:gravity="left"
+            android:text="Exige beaucoup de toi-même et attends peu des autres. Ainsi beaucoup d'ennuis te seront épargnés."
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+           />
+<!--
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:id="@+id/citation_auteur"
+            android:gravity="left|center_vertical"
+            android:text="Confucius"
+            android:textStyle="bold|italic"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+
+        <ImageButton
+            android:id="@+id/voir_auteur"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/material_blue_grey_800"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/favoris_bouton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/material_blue_grey_800"
+             />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/material_blue_grey_800"
+             />
+
+    </LinearLayout>
+
+</LinearLayout>

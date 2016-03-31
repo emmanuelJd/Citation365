@@ -1,0 +1,71 @@
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    - Bottom 2dp Shadow d8d8d8 -
+    <item   android:top="-5dp"
+            android:left="-5dp"
+            android:right="0dp"
+            android:bottom="0dp">
+        <shape  android:shape="rectangle">
+
+            <stroke
+                android:width="3dp"
+                android:color="#409B9A9F" />
+
+            <solid android:color="#009B9A9F" />
+            <corners android:radius="1dp" />
+
+        </shape>
+    </item>
+
+
+
+    - White Top color -
+    <item android:bottom="6px"
+        android:top="2px"
+        android:right="2px"
+        android:left="2px">
+
+        <shape  android:shape="rectangle">
+
+            <solid android:color="#803c4850" />
+            <corners android:radius="1dp" />
+
+
+        </shape>
+
+    </item>
+
+</layer-list> -->
+
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item>
+            <shape>
+                <padding android:top="10dp" android:right="10dp" android:bottom="5dp" android:left="10dp" />
+                <solid android:color="@color/transparent" />
+            </shape>
+        </item>
+
+        <item>
+            <shape>
+                <padding android:top="0dp" android:right="0dp" android:bottom="1dp" android:left="0dp" />
+                <solid android:color="@color/card_shadow_1" />
+                <corners android:radius="2dp" />
+            </shape>
+        </item>
+        <item>
+            <shape>
+                <padding android:top="0dp" android:right="0dp" android:bottom="1dp" android:left="0dp" />
+                <solid android:color="@color/card_shadow_2" />
+                <corners android:radius="2dp" />
+            </shape>
+        </item>
+        <!-- Background -->
+        <item>
+            <shape >
+                <solid android:color="@color/card_background" />
+                <corners android:radius="2dp" />
+            </shape>
+        </item>
+
+    </layer-list>

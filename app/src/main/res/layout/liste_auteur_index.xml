@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_liste_auteur_index"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <fragment
+        android:name="com.citation.emmanuel.citation365.fragments.ListeAuteurIndexFragment"
+        android:id="@+id/view_pager_liste_auteur_index"
+        android:layout_below="@id/toolbar_liste_auteur_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </fragment>
+
+</RelativeLayout>

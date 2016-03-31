@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/barre_de_recherche"
+        android:orientation="horizontal"
+        android:background="#fefefe"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="5dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="70dp"
+            >
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:theme="@style/app_edit_text"
+                android:layout_height="match_parent"
+                android:textColorLink="#3C4850"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/search_button"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="50dp"
+            android:src="@drawable/search"
+            app:backgroundTint="#EF5350"
+            app:rippleColor="#00ffffff"
+            android:top="0dp"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/image_de_fond_recherche"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00ffffff"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/barre_de_recherche"
+        android:fitsSystemWindows="true">
+    </ImageView>
+
+    <ListView
+        android:id="@+id/nav_list_search_citation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FEFEFE"
+        android:padding="10dp"
+        android:dividerHeight="10dp"
+        android:divider="#00FEFEFE"
+        android:choiceMode="singleChoice"
+        android:layout_below="@id/barre_de_recherche">
+
+    </ListView>
+
+
+    <!-- Progress bar lors de chargement d'information -->
+    <FrameLayout
+        android:id="@+id/loading_data_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+    <!-- Le conteneur qui prévient lors d'un manque d'une connectivité, qu'il en faut une pour récupérer les données -->
+    <FrameLayout
+        android:id="@+id/connection_invalide_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_connection"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:padding="10dp"
+            />
+        <!--
+        <Button
+            android:id="@+id/btn_refresh_search"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_app"
+            android:layout_marginBottom="30dp"
+            android:text="@string/refresh"/>
+            -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_refresh_search"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/ic_action_refresh"
+            app:backgroundTint="@color/principal_theme"
+            app:rippleColor="#00ffffff"
+            android:layout_marginBottom="30dp"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

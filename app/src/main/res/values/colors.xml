@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+        <color name="material_blue_grey_800">#37474f</color>
+        <color name="principal_theme">#D0CFD0</color>
+        <color name="dark_theme">#3C4850</color>-->
+        <color name="principal_theme">#3F51B5</color>
+        <color name="primary">#3F51B5</color>
+        <color name="primary_dark">#303F9F</color>
+        <color name="accent">#EF5350</color>
+
+    <color name="transparent">#00000000</color>
+    <!-- card colors -->
+    <color name="card_background">#803F51B5</color>
+    <color name="card_shadow_1">#80d4d4d4</color>
+    <color name="card_shadow_2">#80dddddd</color>
+    <color name="card_detailing">#80eeeeee</color>
+</resources>

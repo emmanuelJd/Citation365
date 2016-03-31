@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Citation365.iml" filepath="$PROJECT_DIR$/Citation365.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Google Licence Library/Google Licence Library.iml" filepath="$PROJECT_DIR$/Google Licence Library/Google Licence Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/license/license.iml" filepath="$PROJECT_DIR$/license/license.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE">
+
+    <ImageView
+        android:id="@+id/image_de_fond_favoris"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#00ffffff"
+        android:scaleType="centerCrop"
+        android:fitsSystemWindows="true"></ImageView>
+
+    <ListView
+        android:id="@+id/nav_list_citation_favoris"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FEFEFE"
+        android:padding="10dp"
+        android:dividerHeight="20dp"
+        android:divider="#00FEFEFE"
+        android:layout_below="@+id/profil_box"
+        android:choiceMode="singleChoice"
+        android:layout_alignParentTop="true"
+        >
+
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:weightSum="100">
+    <!--android:visibility="gone"-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/fragment_fiche_auteur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:weightSum="100">
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90"
+            android:numColumns="3"
+            android:id="@+id/gridview_index_auteur"
+            android:clickable="true"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#FFF">
+
+        </GridView>
+
+
+    </LinearLayout>
+    <!-- Progress bar lors de chargement d'information -->
+    <FrameLayout
+        android:id="@+id/loading_data_fragment_liste_auteur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+    <!-- Le conteneur qui prévient lors d'un manque d'une connectivité, qu'il en faut une pour récupérer les données -->
+    <FrameLayout
+        android:id="@+id/connection_invalide_fragment_liste_auteur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_connection"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:padding="10dp"
+            />
+<!--
+        <Button
+            android:id="@+id/btn_refresh_fragment_liste_auteur"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_app"
+            android:layout_marginBottom="30dp"
+            android:text="@string/refresh"/>
+-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_refresh_fragment_liste_auteur"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/ic_action_refresh"
+            app:backgroundTint="@color/principal_theme"
+            app:rippleColor="#00ffffff"
+            android:layout_marginBottom="30dp"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_auteur"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="#fefefe"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/new_citation_option_text"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:textStyle=""
+                android:textColor="#3c4850"
+                android:gravity="left"
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:text="Notification citation du jour : " />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/new_citation_option_switch"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:checked="false"
+                android:textOff="OFF"
+                android:textOn="ON"
+                app:showText="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="#fefefe"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/new_citation_option_text_vibration"
+                android:layout_width="0dp"
+                android:layout_weight="70"
+                android:textStyle=""
+                android:textColor="#3c4850"
+                android:gravity="left"
+                android:layout_gravity="right"
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:text=" - Option vibreur : " />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/new_citation_option_switch_vibration"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:checked="false"
+                android:textOff="OFF"
+                android:textOn="ON"
+                app:showText="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="#fefefe"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/new_citation_option_text_lumiere"
+                android:layout_width="0dp"
+                android:layout_weight="70"
+                android:textStyle=""
+                android:textColor="#3c4850"
+                android:layout_gravity="right"
+                android:gravity="left"
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:text=" - Notification lumineuse : " />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/new_citation_option_switch_lumiere"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:checked="false"
+                android:textOff="OFF"
+                android:textOn="ON"
+                app:showText="false"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="#fefefe"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/citation_option_image_de_fond"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:textStyle=""
+                android:textColor="#3c4850"
+                android:gravity="left"
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:text="Image de fond : " />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/citation_option_switch_image_de_fond"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:checked="false"
+                android:textOff="OFF"
+                android:textOn="ON"
+                app:showText="false"/>
+
+        </LinearLayout>
+
+</LinearLayout>

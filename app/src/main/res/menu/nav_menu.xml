@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_accueil"
+            android:checked="true"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Accueil" />
+        <item
+            android:id="@+id/menu_favoris"
+            android:icon="@drawable/ic_menu_bookmark"
+            android:title="Favoris" />
+        <item
+            android:id="@+id/menu_recherche"
+            android:icon="@drawable/search"
+            android:title="Recherche" />
+        <item
+            android:id="@+id/menu_liste_auteur"
+            android:icon="@drawable/ic_menu_liste"
+            android:title="Liste auteur" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/menu_preference"
+                android:icon="@drawable/ic_menu_preferences"
+                android:title="Préférences" />
+
+            <item
+                android:id="@+id/menu_quit"
+                android:icon="@drawable/ic_menu_quit"
+                android:title="Quitter" />
+        </menu>
+    </item>
+
+</menu>

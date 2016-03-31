@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background"
+    android:weightSum="100">
+    <!--android:visibility="gone"-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/fragment_fiche_auteur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_background"
+        android:weightSum="100">
+
+
+        <!-- les informations sur l'auteur -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <!-- Sur les informations liées à l'auteur  on regroupe une fiche avec nom auteur, fonction -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:weightSum="100"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Nom auteur -->
+                    <TextView
+                        android:id="@+id/nom_auteur"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#fff"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <!-- Metier auteur -->
+                    <TextView
+                        android:id="@+id/fonction_auteur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#fff"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textStyle="italic"/>
+
+
+                </LinearLayout>
+
+                <!-- image auteur -->
+                <ImageView
+                    android:id="@+id/image_auteur"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:scaleType="centerCrop"
+                    android:alpha="1" />
+
+            </LinearLayout>
+
+            <!-- citation célèbre -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#00ffffff">
+
+                <TextView
+                    android:id="@+id/citation_celebre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+
+            </ScrollView>
+
+            <!-- Biographie de l'auteur -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="#00ffffff">
+
+                <TextView
+                    android:id="@+id/biographie_auteur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text=""
+                    android:background="#00ffffff"/>
+
+            </ScrollView>
+
+            <!-- Button pour rediriger sur les autres citations -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="autre(s) citation(s)"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:layout_toLeftOf="@+id/btn_autre_citation"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@id/btn_autre_citation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_action_next_item"
+                    app:backgroundTint="#EF5350"
+                    app:rippleColor="#00ffffff"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Progress bar lors de chargement d'information -->
+    <FrameLayout
+        android:id="@+id/loading_data_fragment_fiche_auteur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+    <!-- Le conteneur qui prévient lors d'un manque d'une connectivité, qu'il en faut une pour récupérer les données -->
+    <FrameLayout
+        android:id="@+id/connection_invalide_fragment_fiche_auteur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_connection"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:padding="10dp"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_refresh_fragment_fiche_auteur"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/ic_action_refresh"
+            app:backgroundTint="@color/principal_theme"
+            app:rippleColor="#00ffffff"
+            android:layout_marginBottom="30dp"
+            />
+    </FrameLayout>
+
+</RelativeLayout>
