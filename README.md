@@ -1,9 +1,7 @@
 # Citation365
 Citation365 est une application android permettant d'avoir accès à des citations, dont une nouvelle chaque jour.
 
-<img src="citation_photo_1.png" alt="Citation365" style="width: 250px;"/>
-
-![Application Android](citation_photo_2.png =250x "Citation 365")
+<img src="citation_photo_1.png" alt="Citation365" style="width: 100px;"/>
 
 Application disponible sur le play store [Citation365](https://play.google.com/store/apps/details?id=com.citation.emmanuel.citation365)
 
